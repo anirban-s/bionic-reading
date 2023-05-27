@@ -1,0 +1,28 @@
+{
+  "name": "Bionic Reading",
+  "description": "This extension helps in Bionic Reading",
+  "version": "0.0.0.1",
+  "manifest_version": 3,
+  "permissions": ["contextMenus", "scripting", "tabs"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "128": "icon128.png",
+    "48": "icon48.png",
+    "16": "icon16.png"
+  },
+  "action": {
+    "default_icon": "icon16.png",
+    "default_title": "Bionic Reading",
+    "default_popup": "popup.html"
+  },
+  "host_permissions": ["*://*/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "match_origin_as_fallback": true,
+      "js": ["content.js"]
+    }
+  ]
+}
