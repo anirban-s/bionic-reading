@@ -23,19 +23,19 @@ function main() {
       );
     }
 
-    e.innerHTML = bionifyText(sel.toString());
+    e.innerHTML = processText(sel.toString());
     const range = sel.getRangeAt(0);
     range.deleteContents();
     range.insertNode(e);
   }
 }
 
-function bionifyText(text) {
+function processText(text) {
   const words = text.split(/\s+/);
-  return words.map(bionifyWord).join(" ");
+  return words.map(processWord).join(" ");
 }
 
-function bionifyWord(word) {
+function processWord(word) {
   const wordLength = word.length;
   const numBionifiedCharacters = Math.floor((wordLength * 60) / 100);
   const bionifiedToken = word.slice(0, numBionifiedCharacters);
