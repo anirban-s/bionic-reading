@@ -1,7 +1,7 @@
 {
-  "name": "Bionic Reading",
-  "description": "This extension helps in Bionic Reading",
-  "version": "0.0.0.1",
+  "name": "Fast Reader",
+  "description": "This extension helps to read faster.",
+  "version": "1.0",
   "manifest_version": 3,
   "permissions": ["contextMenus", "scripting", "tabs"],
   "background": {
@@ -14,7 +14,7 @@
   },
   "action": {
     "default_icon": "icon16.png",
-    "default_title": "Bionic Reading",
+    "default_title": "Fast Reader",
     "default_popup": "popup.html"
   },
   "host_permissions": ["*://*/*"],
